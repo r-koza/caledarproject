@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>カレンダー</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="calendar">
+        <div class="calendar-header">
+            <button id="prevMonth">前月</button>
+            <h2 id="monthName">2025年1月</h2>
+            <button id="nextMonth">次月</button>
+        </div>
+        <div class="calendar-days">
+            <div class="day">日</div>
+            <div class="day">月</div>
+            <div class="day">火</div>
+            <div class="day">水</div>
+            <div class="day">木</div>
+            <div class="day">金</div>
+            <div class="day">土</div>
+        </div>
+        <div class="calendar-grid" id="calendarGrid">
+            <!-- 日付がここに動的に追加されます -->
+        </div>
+    </div>
+ 
+    <div class="modal" id="memoModal">
+        <div class="modal-content">
+            <textarea id="memoText" placeholder="メモを入力"></textarea>
+            <button id="saveMemo">保存</button>
+            <button id="closeModal">閉じる</button>
+        </div>
+    </div>
+ 
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
