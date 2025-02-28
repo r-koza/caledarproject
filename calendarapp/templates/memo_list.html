@@ -1,0 +1,42 @@
+{% extends 'base2.html' %}
+{% load static %}
+{% block title %}Log out{% endblock %}
+{% block contents %}
+<link rel="stylesheet" href="{% static 'css/styles2.css' %}">
+<div class="memo-list-container">
+    <div class="memo-list">
+        <h2>メモ一覧</h2>
+        <table class="memo-table">
+            <thead>
+                <tr>
+                    <th>日付</th>
+                    <th>メモ内容</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for memo in memos %}
+                <tr>
+                    <td>{{ memo.date }}</td>
+                    <td>{{ memo.text }}</td>
+                    <td>
+                        <!-- 📌 削除ボタン -->
+                        <form action="{% url 'calendarapp:memo_delete' memo.id %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger btn-sm">削除</button>
+                        </form>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="3">メモがありません</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        <a href="{% url 'calendarapp:karenda' %}" class="btn btn-secondary">カレンダーに戻る</a>
+    </div>
+</div>
+
+{% endblock %}

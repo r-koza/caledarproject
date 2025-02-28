@@ -1,0 +1,121 @@
+
+/* メモ一覧ページ全体のスタイル */
+
+.memo-list-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .memo-list {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .memo-list h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* ============================= */
+  /* 📌 メモテーブルのスタイル */
+  /* ============================= */
+  .memo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .memo-table th,
+  .memo-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .memo-table th {
+    background-color: #4bc74f;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .memo-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .memo-table tr:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .memo-table td {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* 📌 削除ボタンのスタイル */
+  .memo-table .btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .memo-table .btn-danger:hover {
+    background-color: #c82333;
+  }
+  
+  /* ============================= */
+  /* 📌 戻るボタンのスタイル */
+  /* ============================= */
+  .btn-secondary {
+    display: inline-block;
+    text-align: center;
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+  /* ============================= */
+  /* 📌 レスポンシブ対応 */
+  /* ============================= */
+  @media (max-width: 768px) {
+    .memo-list-container {
+      padding: 10px;
+    }
+  
+    .memo-list h2 {
+      font-size: 20px;
+    }
+  
+    .memo-table th,
+    .memo-table td {
+      padding: 8px;
+      font-size: 12px;
+    }
+  
+    .btn-secondary {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  
